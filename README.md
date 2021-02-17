@@ -7,3 +7,5 @@ pip install bs4
 
 cat值为分类，例如https://pt.m-team.cc/torrents.php?cat=427
 427即为电子书
+
+使用前先在同文件夹下创建wget.sh
