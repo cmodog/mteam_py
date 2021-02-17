@@ -47,8 +47,8 @@ class mt():
 
     def check(self):
         global id,title,space
-        select_GB = [i for i in range(len(space)) if "GB" in space[i]]
-        select_MB = [i for i in range(len(space)) if "MB" in space[i] and float(str(re.findall('[0-9]*\.?[0-9]+', space[i])[0])) >= 10]
+        select_GB = [i for i in range(len(space)) if "GB" in space[i]]#此处意为过滤单位为GB的种子
+        select_MB = [i for i in range(len(space)) if "MB" in space[i] and float(str(re.findall('[0-9]*\.?[0-9]+', space[i])[0])) >= 10]#此处意为过滤大于等于10MB的种子，可自行修改
         space = [space[i] for i in range(len(space)) if (i not in select_GB and i not in select_MB)]
         id = [id[i] for i in range(len(id)) if (i not in select_GB and i not in select_MB)]
         title = [title[i] for i in range(len(title)) if (i not in select_GB and i not in select_MB)]
